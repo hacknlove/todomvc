@@ -2,15 +2,12 @@
 
 require_once './lib/models/connect.php';
 
-$toggle = false;
+$sthIsThereAnyUncompleted = $dbh->prepare("SELECT * FROM tasks WHERE completed = false LIMIT 1");
 
-foreach ($_SESSION['tasks'] as $task) {
-    if (!$task['completed']) {
-        $toggle = true;
-        break;
-    }
-}
+$sthIsThereAnyUncompleted->execute();
 
-foreach ($_SESSION['tasks'] as $id => $task) {
-    $_SESSION['tasks'][$id]['completed'] = $toggle;
-}
+$completed = $sthIsThereAnyUncompleted->rowCount() != 0;
+
+$sth = $dbh->prepare("UPDATE tasks SET completed = ?");
+
+$sth->execute([$completed]);
