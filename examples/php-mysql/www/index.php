@@ -1,3 +1,3 @@
 <?php
 
-include './lib/index.html';
+include './lib/controllers/home.php';
