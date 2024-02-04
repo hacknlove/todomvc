@@ -3,9 +3,9 @@
   <ul class="todo-list">
     <?php foreach ($tasks as $task) { ?>
       <li class="<?= $task['completed'] ? 'completed' : '' ?>">
-        <form action="" method="post">
+        <form action="/toggle" method="post">
           <input type="hidden" name="id" value="<?= $task['id'] ?>" />
-          <button class="view" name="toogle" value="<?= $task['completed'] ? 'false' : 'true' ?>">
+          <button class="view" name="toggle" value="<?= $task['completed'] ? 'false' : 'true' ?>">
               <input class="toggle" type="checkbox" <?= $task['completed'] ? 'checked' : '' ?>>
               <label><?php echo $task['title']; ?></label>
             </button>
