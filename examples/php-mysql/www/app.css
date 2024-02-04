@@ -214,16 +214,42 @@ body {
 .todo-list li label {
 	color: #484848;
 	display: block;
-	font-weight: 400;
+	font-weight: 900;
 	line-height: 1.2;
 	padding: 15px 15px 15px 60px;
 	transition: color .4s;
+	text-decoration:underline ;
 	word-break: break-all
 }
 
 .todo-list li.completed label {
 	color: #949494;
 	text-decoration: line-through
+}
+
+.todo-list li .description {
+	color: #041424;
+	font-family: serif;
+	margin: 0 100px;
+	padding: 0 0 20px;
+	line-height: 1.1;
+	font-style: oblique;
+	font-size: 95%;
+	white-space: pre-wrap;
+}
+
+.todo-list li .editDescription {
+	color: #041424;
+	font-family: serif;
+	margin: 0 0 0 43px;
+	padding: 10px 100px 10px 57px;
+	width: calc(100% - 43px);
+	box-sizing: border-box;
+	line-height: 1.1;
+	font-style: oblique;
+	font-size: 95%;
+	margin-top: 10px;
+	box-shadow: 0 0 2px 2px #cf7d7d;
 }
 
 .todo-list li .destroy,
