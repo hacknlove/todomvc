@@ -9,7 +9,7 @@
   <body>
     <section class="todoapp">
       <header class="header">
-        <h1>todos</h1><form action="" method="POST">
+        <h1>todos</h1><form action="/create" method="POST">
           <input class="new-todo" name="newTask" placeholder="What needs to be done?" autofocus />
         </form>
       </header>

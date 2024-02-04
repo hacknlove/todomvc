@@ -5,6 +5,7 @@ $_SESSION['lastId']++;
 
 $_SESSION['tasks'][] = [
     'id' => $_SESSION['lastId'],
-    'title' => $_POST['newTask'],
+    'title' => $title,
     'completed' => false
 ];
+
