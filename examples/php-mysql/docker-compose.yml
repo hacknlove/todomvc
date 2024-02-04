@@ -8,6 +8,7 @@ services:
     volumes:
       - ./www:/var/www/html
       - ./docker/web-start.sh:/usr/local/bin/docker-php-entrypoint
+      - ./docker/000-default.conf:/etc/apache2/sites-available/000-default.conf
     depends_on:
       - db
     networks:

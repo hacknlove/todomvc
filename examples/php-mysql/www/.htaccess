@@ -1,0 +1,11 @@
+# Comprueba si el módulo mod_rewrite está activado
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+    # Ignora directorios y archivos existentes para que no se aplique la regla a ellos
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+
+    # Reescribe cualquier solicitud a su correspondiente archivo .php si existe
+    RewriteRule ^(.*)$ $1.php [L,QSA]
+</IfModule>
