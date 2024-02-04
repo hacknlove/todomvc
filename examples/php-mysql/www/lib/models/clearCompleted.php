@@ -2,12 +2,6 @@
 
 require_once './lib/models/connect.php';
 
-$tasks= [];
+$sth = $dbh->prepare("DELETE FROM tasks WHERE completed = 1");
 
-foreach($_SESSION['tasks'] as $task) {
-    if (!$task['completed']) {
-        $tasks[] = $task;
-    }
-};
-
-$_SESSION['tasks'] = $tasks;
+$sth->execute();
