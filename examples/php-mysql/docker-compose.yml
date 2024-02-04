@@ -7,10 +7,12 @@ services:
       - "8080:80"
     volumes:
       - ./www:/var/www/html
+      - ./docker/web-start.sh:/usr/local/bin/docker-php-entrypoint
     depends_on:
       - db
     networks:
       - app-network
+    entrypoint: ["/usr/local/bin/docker-php-entrypoint"]
 
   db:
     image: mariadb
