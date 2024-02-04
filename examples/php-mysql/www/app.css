@@ -487,4 +487,12 @@ html .clear-completed:active {
 	fill: #000
 }
 
-/*# sourceMappingURL=app.css.map*/
+.deadline {
+	text-align: right;
+	color: #cf7d7d;
+	font-size: 90%;
+	font-family: monospace;
+	margin-right: 10px;
+	letter-spacing: -2px;
+	font-weight: 900;
+}

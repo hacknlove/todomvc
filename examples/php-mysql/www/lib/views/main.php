@@ -18,7 +18,6 @@
           <input class="new-todo" name="newTask" placeholder="What needs to be done?" <?= $edit ? 'autofocus' : '' ?> />
           <textarea name="description" placeholder="Description" class="new-description"></textarea>
           <div class="mainButtons">
-            <label>Deadline: </label>
             <input type="date" name="endDate" class="new-deadline" />
             <button class="mainButton">Add</button>
           </div>
