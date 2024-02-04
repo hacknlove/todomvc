@@ -8,7 +8,7 @@
           <button class="view" name="toogle" value="<?= $task['completed'] ? 'false' : 'true' ?>">
               <input class="toggle" type="checkbox" <?= $task['completed'] ? 'checked' : '' ?>>
               <label><?php echo $task['title']; ?></label>
-              <button class="destroy"></button>
+              <button class="destroy" name="delete"></button>
           </button>
         </form>
       </li>
