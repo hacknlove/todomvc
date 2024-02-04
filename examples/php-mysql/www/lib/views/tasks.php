@@ -7,6 +7,10 @@
             <input type="hidden" name="id" value="<?= $task['id'] ?>" />
             <input autofocus class="edit" type="text" name="title" value="<?= $task['title'] ?>" />
             <textarea class="editDescription" placeholder="Description" name="description" maxlength="255"><?= $task['description'] ?></textarea>
+            <div class="mainButtons">
+              <button>Save</button>
+              <a href="?edit=null">Cancel</a>
+            </div>
           </form>
         </li>
       <? } else  { ?>
