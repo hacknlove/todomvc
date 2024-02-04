@@ -8,13 +8,29 @@
  <link href="app.css" rel="stylesheet">
   <body>
     <section class="todoapp">
+      <header class="header">
+        <h1>todos</h1>
       <?php
         if (isset($tasks[0]) || $remaining) {
           include './lib/views/toggleAll.php';
         }
       ?>
-      <header class="header">
-        <h1>todos</h1><form action="/create" method="POST">
+        <form action="" method="get">
+          <select name="sort-by" onchange="this.form.submit()">
+            <option value="">sort by</option>
+            <?php if ($type == 'all') { ?>
+                <option value="completed">completed</option>
+                <option value="active">active</option>
+            <?php } ?>
+            <option value="title">title</option>
+            <option value="-title">reverse title</option>
+            <option value="created_at">created at</option>
+            <option value="-created_at">reverse created at</option>
+            <option value="deadline">deadline</option>
+            <option value="-deadline">reverse deadline</option>
+          </select>
+        </form>
+        <form action="/create" method="POST">
           <input class="new-todo" name="newTask" placeholder="What needs to be done?" <?= $edit ? 'autofocus' : '' ?> />
           <textarea name="description" placeholder="Description" class="new-description"></textarea>
           <div class="mainButtons">
@@ -30,7 +46,6 @@
       ?>
     </section>
     <footer class="info">
-      <p>Double-click to edit a todo</p>
       <p>Created by the TodoMVC Team</p>
       <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
     </footer>

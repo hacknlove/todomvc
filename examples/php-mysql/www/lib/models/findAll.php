@@ -1,8 +1,7 @@
 <?php
 require_once './lib/models/connect.php';
 
-$sth = $dbh->prepare("SELECT * FROM tasks");
+$sql = "SELECT * FROM tasks";
 
-$sth->execute();
+require './lib/models/findGeneric.php';
 
-$tasks = $sth->fetchAll();
