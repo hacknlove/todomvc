@@ -1,10 +1,7 @@
 <?php
-session_start();
 
-if (!isset($_SESSION['lastId'])) {
-    $_SESSION['lastId'] = -1;
-}
+require_once './lib/config.php';
 
-if (!isset($_SESSION['tasks'])) {
-    $_SESSION['tasks'] = [];
-}
+$dsn = "mysql:dbname={$dbconfig['dbname']};host={$dbconfig['dbhost']}";
+
+$dbh = new PDO($dsn, $dbconfig['dbuser'], $dbconfig['dbpassword']);

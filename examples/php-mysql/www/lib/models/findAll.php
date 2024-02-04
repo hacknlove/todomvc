@@ -1,4 +1,8 @@
 <?php
 require_once './lib/models/connect.php';
 
-$tasks = $_SESSION['tasks'];
+$sth = $dbh->prepare("SELECT * FROM tasks");
+
+$sth->execute();
+
+$tasks = $sth->fetchAll();

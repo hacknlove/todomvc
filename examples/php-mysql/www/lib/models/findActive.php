@@ -1,11 +1,10 @@
 <?php
 require_once './lib/models/connect.php';
 
-$tasks= [];
+$sth = $dbh->prepare("SELECT * FROM tasks WHERE completed = 0");
 
-foreach($_SESSION['tasks'] as $task) {
-    if (!$task['completed']) {
-        $tasks[] = $task;
-    }
-};
+$sth->execute();
 
+$tasks = $sth->fetchAll();
+
+$remaining = count($tasks);
