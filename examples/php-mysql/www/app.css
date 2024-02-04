@@ -175,11 +175,18 @@ body {
 	width: calc(100% - 43px)
 }
 
+.view {
+	display: block;
+	width: 100%;
+	text-align: left;
+}
+
 .todo-list li.editing .view {
 	display: none
 }
 
 .todo-list li .toggle {
+	pointer-events: none;
 	-webkit-appearance: none;
 	appearance: none;
 	border: none;

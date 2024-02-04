@@ -6,6 +6,10 @@ if (isset($_POST['newTask'])) {
     require './lib/models/create.php';
 }
 
+if (isset($_POST['toogle'])) {
+    require './lib/models/toogle.php';
+}
+
 require './lib/models/findAll.php';
 
 require './lib/views/main.php';
