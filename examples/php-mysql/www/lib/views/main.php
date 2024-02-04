@@ -16,6 +16,12 @@
       <header class="header">
         <h1>todos</h1><form action="/create" method="POST">
           <input class="new-todo" name="newTask" placeholder="What needs to be done?" <?= $edit ? 'autofocus' : '' ?> />
+          <textarea name="description" placeholder="Description" class="new-description"></textarea>
+          <div class="mainButtons">
+            <label>Deadline: </label>
+            <input type="date" name="endDate" class="new-deadline" />
+            <button class="mainButton">Add</button>
+          </div>
         </form>
       </header>
       <?php 

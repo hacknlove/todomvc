@@ -129,8 +129,30 @@ body {
 	justify-content: center;
 	left: 0;
 	position: absolute;
-	top: -65px;
-	width: 45px
+	top: 20px;
+	width: 45px;
+	z-index: 1;
+}
+
+.mainButtons>button, .mainButtons>a {
+	border: 1px solid rgba(0, 0, 0, .2);
+	font-size: 1.3rem;
+	padding: 10px 20px;
+	display: flex;
+	z-index: 1;
+	color: inherit;
+	text-decoration: inherit;
+	justify-content: center;
+	align-items: center;
+	cursor: default;
+}
+
+.mainButtons {
+	display: flex;
+	padding: 10px;
+	column-gap: 10px;
+	justify-content: flex-end;
+
 }
 
 .toggle-all+label:before {
@@ -250,6 +272,25 @@ body {
 	font-size: 95%;
 	margin-top: 10px;
 	box-shadow: 0 0 2px 2px #cf7d7d;
+	height: 200px;
+	resize: none;
+}
+
+.new-description {
+	color: #041424;
+	font-family: serif;
+	margin: 0;
+	padding: 10px 100px 10px 100px;
+	width: 100%;
+	box-sizing: border-box;
+	line-height: 1.1;
+	font-style: oblique;
+	font-size: 22.8px;
+	margin-top: 10px;
+	appearance: none;
+	border: none;
+	resize: none;
+	height: 200px;
 }
 
 .todo-list li .destroy,
