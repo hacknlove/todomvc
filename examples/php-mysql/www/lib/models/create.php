@@ -1,11 +1,9 @@
 <?
 require_once './lib/models/connect.php';
 
-$_SESSION['lastId']++;
+$sth = $dbh->prepare("INSERT INTO tasks (title) VALUES (:title)");
 
-$_SESSION['tasks'][] = [
-    'id' => $_SESSION['lastId'],
-    'title' => $title,
-    'completed' => false
-];
+$sth->bindParam(':title', $title);
+
+$sth->execute();
 
