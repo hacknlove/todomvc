@@ -1,3 +1,3 @@
 <?php
 
-print("DELETE " . $_POST['id'] . "\n");
+print("DELETE " . $id . "\n");
