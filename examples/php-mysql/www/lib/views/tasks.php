@@ -1,5 +1,4 @@
 <main class="main">
-  <div class="toggle-all-container"><form action="/toggleAll" method="post"><button name="toggleAll"><input class="toggle-all" type="checkbox" /><label class="toggle-all-label" for="toggle-all">Mark all as complete</label></button></form></div>
   <ul class="todo-list">
     <?php foreach ($tasks as $task) { 
       if ($edit == $task['id']) { ?>
