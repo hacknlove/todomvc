@@ -17,7 +17,7 @@
     <?php } ?>
   </ul>
 </main>
-<footer class="footer"><span class="todo-count"></span>
+<footer class="footer"><span class="todo-count"><?= $remaining ?> item<?= $remaining == 1 ? '' : 's' ?> left</span>
   <ul class="filters">
     <li><a href="/" <?= $type === 'all' ? 'class="selected"' : '' ?>>All</a></li>
     <li><a href="/active" <?= $type == 'active' ? 'class="selected"' : '' ?>>Active</a></li>
