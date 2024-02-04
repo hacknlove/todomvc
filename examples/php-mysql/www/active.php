@@ -1,5 +1,3 @@
 <?php 
 
-$type = "active";
-
-include './lib/controllers/home.php';
+include './lib/controllers/active.php';

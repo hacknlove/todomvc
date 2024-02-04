@@ -1,5 +1,3 @@
 <?php
 
-$type = 'all';
-
-include './lib/controllers/home.php';
+include './lib/controllers/all.php';
