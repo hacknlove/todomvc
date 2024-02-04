@@ -172,7 +172,8 @@ body {
 	display: block;
 	margin: 0 0 0 43px;
 	padding: 12px 16px;
-	width: calc(100% - 43px)
+	width: calc(100% - 43px);
+	box-shadow: 0 0 2px 2px #cf7d7d;
 }
 
 .view {
@@ -225,7 +226,9 @@ body {
 	text-decoration: line-through
 }
 
-.todo-list li .destroy {
+.todo-list li .destroy,
+.todo-list li .editButton
+ {
 	bottom: 0;
 	color: #949494;
 	display: none;
@@ -239,6 +242,11 @@ body {
 	width: 40px
 }
 
+.todo-list li .editButton {
+	right: 50px;
+}
+
+
 .todo-list li .destroy:focus,
 .todo-list li .destroy:hover {
 	color: #c18585
@@ -247,9 +255,13 @@ body {
 .todo-list li .destroy:after {
 	content: "×";
 	display: block;
-	height: 100%;
-	line-height: 1.1
 }
+
+
+.todo-list li:hover .editButton {
+	display: block;
+}
+
 
 .todo-list li:hover .destroy {
 	display: block

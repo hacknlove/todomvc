@@ -10,11 +10,11 @@
     <section class="todoapp">
       <header class="header">
         <h1>todos</h1><form action="/create" method="POST">
-          <input class="new-todo" name="newTask" placeholder="What needs to be done?" autofocus />
+          <input class="new-todo" name="newTask" placeholder="What needs to be done?" <?= $edit ? 'autofocus' : '' ?> />
         </form>
       </header>
       <?php 
-        if (isset($tasks[0])) {
+        if (isset($tasks[0]) || $remaining) {
           include './lib/views/tasks.php';
         }
       ?>
