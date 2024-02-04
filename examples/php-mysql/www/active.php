@@ -2,4 +2,4 @@
 
 $type = "active";
 
-include './index.php';
+include './lib/controllers/home.php';

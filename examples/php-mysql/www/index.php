@@ -1,5 +1,5 @@
 <?php
 
-$type ??= 'all';
+$type = 'all';
 
 include './lib/controllers/home.php';
